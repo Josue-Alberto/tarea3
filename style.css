@@ -15,7 +15,7 @@ button{
 }
 input{
     height: 60px;
-    width: 22.5ch;
+    width: 28ch;
     font-size: larger;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(49, 215, 7);
@@ -34,16 +34,16 @@ input{
     background-color: brown;
     color: white;
     height: 55px;
-    width: 55px;
+    width: 15.5ch;
 
     
 }
-#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9{
+#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn00{
 background-color: blue;
 color:bisque;
 
 }
-#btnsuma,#btndivi,#btnmulti{
+#btnsuma,#btndivi,#btnmulti,#btnres{
 background-color: darkcyan;
 color:bisque;
 
