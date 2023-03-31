@@ -15,6 +15,8 @@ const btn7 = document.getElementById("btn7");
 const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
 const btn0 = document.getElementById("btn0");
+const btnres = document.getElementById("btnres");
+const btn00 = document.getElementById("btn00");
 const limpiar = document.getElementById("Limpiar");
 const btnsuma = document.getElementById("btnsuma");
 const btndivi = document.getElementById("btndivi");
@@ -110,7 +112,15 @@ if(pan!=""){
 
 
 
+
+
 btn0.addEventListener("click",function(){
+    a = textbox.value
+    textbox.value = a+0+0
+
+})
+
+btn00.addEventListener("click",function(){
     a = textbox.value
     textbox.value = a+0
 
@@ -180,6 +190,12 @@ btnsuma.addEventListener("click",function(){
     textbox.value = "";
 });
 
+btnres.addEventListener("click",function(){
+    operacion = "-";
+    primvs = parseInt(textbox.value);
+    textbox.value = "";
+});
+
 btnmulti.addEventListener("click", function() {
     operacion = "*";
     primvs = parseInt(textbox.value);
@@ -198,6 +214,9 @@ btnigual.addEventListener("click",function(){
     switch (operacion) {
         case "+":
             resul = primvs + v2s;
+            break;
+        case "-":
+            resul = primvs - v2s;
             break;
         case "*":
             resul = primvs * v2s;
