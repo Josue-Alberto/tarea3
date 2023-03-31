@@ -1,9 +1,4 @@
-function pantalla(x){
 
-
-    document.calc.text.value += x ;
-
-}
 
 const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
@@ -23,91 +18,6 @@ const btndivi = document.getElementById("btndivi");
 const btnmulti = document.getElementById("btnmulti");
 const btnigual = document.getElementById("btnigual");
 const textbox = document.getElementById("textbox");
-function igualResultado(num){
-    
-    const pan=document.getElementById("textbox").value
-    resultado=num + '=' + eval(num);
-    console.log(resultado);
-    localStorage.getItem(pan)
-    let random= Math.round(Math.random()*220);
-
-if(pan!=""){
-    
-    if (localStorage.getItem(pan)) {
-        console.error("")
-    }else{ 
-        document.getElementById("mensaje").innerHTML=`<p class="pantallita">su resultado es: ${resultado}</p>`
-    }
-    
-    localStorage.setItem(JSON.stringify(random+"History ="),resultado);
-}else{ 
-    document.getElementById("mensaje").innerHTML =`<p class="pantallita">no as ingresado numeror</p>`;
-    
-}
-
-
-
-}
-
- function eliminarHistorial(){
-    document.getElementById("mensaje").innerHTML =`<p class="pantallita">Eliminaste el Historial</p>`;
-    document.getElementById("datos").innerHTML = "";
-    localStorage.clear();
-}
-
-
-  function mostrarHistorial(){
-  
-    const divDatos=document.getElementById("datos");
-   divDatos.innerHTML=``;
-    
-    
-
-    if (localStorage===0) {
-        
-        document.getElementById("mensaje").innerHTML =`<p>no tienes historial</p>`
-    }else{
- 
-  
-        let tabla = document.createElement("table");
-        tabla.setAttribute("borde","9")
-       
-        let tr = document.createElement("tr"),
-        th=document.createElement("th"),
-        thTexto=document.createTextNode("history");
-        
-         th.appendChild(thTexto);
-         tr.appendChild(th);  
-         tabla.appendChild(tr);
-
-
-         for (let index = 0; index < localStorage.length; index++) {
-
-            const key = localStorage.key(index);
-
-            let tr = document.createElement("tr");
-            let td = document.createElement("td");
-            let tdText = document.createTextNode(key);
-
-            td.appendChild(tdText);
-            tr.appendChild(td);
-
-            td = document.createElement("td");
-            tdText = document.createTextNode(localStorage.getItem(key));
-
-            td.appendChild(tdText);
-            tr.appendChild(td);
-
-            tabla.appendChild(tr);
-
-        }
-        
-
-        divDatos.appendChild(tabla)
-    }
-
-  }
-
 
 
 
